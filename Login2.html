@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <title>Login Page</title>
+    <style>
+        body{
+            background-image: url("Backimg.jpg");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+        h1{
+            margin-left: 42%;
+            padding: 2%;
+            position: relative;
+            font-family: Arial, Helvetica, sans-serif;
+            text-decoration: solid;
+            text-shadow: 50%;
+            color: #749BC2;
+        }
+        .align{
+            display: flex;
+            flex: wrap;
+            margin-left: 35%;
+        }
+        .details{
+            text-align: center;
+            margin-top: 5px;
+            width: 300px;
+            background-color: white;
+            border: 5px solid #5C8374;
+            padding: 15px;
+            border-radius: 20px;
+        }
+        label{
+            border-radius: 20px;
+        }
+        details{
+            margin-top: 30px;
+        }
+        button:hover{
+            background-color: #96B6C5;
+        }
+        input{
+            align-content: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <h1>Login</h1>
+    <div class="align" style="position: absolute; display: block; flex: wrap; margin-top: 2%;">
+    <form action="" method="post">
+        <div class="details">
+            <label for="first name" style="font-weight: bold; color: #252B48;">First Name:</label>
+            <input type="text" class="form-control" id="first name" name="first name" placeholder="First Name">
+        </div>
+        <div class="details">
+            <label for="last name" style="font-weight: bold; color: #252B48;">Last Name:</label>
+            <input type="text" class="form-control" id="last name" name="last name" placeholder="Last Name">
+        </div>
+        <div class="details">
+            <label for="birth date" style="font-weight: bold; color: #252B48;">Birth Date:</label>
+            <input type="text" class="form-control" id="birth date" name="birth date" placeholder="xx/yy/zzzz">
+        </div>
+        <div class="details">
+            <label for="id no" style="font-weight: bold; color: #252B48;">Identity No:</label>
+            <input type="text" class="form-control" id="id no" name="id no" placeholder="Aadhar Number">
+        </div>
+        <div class="details">
+            <label for="mob no" style="font-weight: bold; color: #252B48;">Mobile No:</label>
+            <input type="text" class="form-control" id="mob no" name="mob no" placeholder="+91-">
+        </div>
+        <div class="details">
+            <label for="email" style="font-weight: bold; color: #252B48;">Email:</label>
+            <input type="text" class="form-control" id="email" name="email" placeholder="Enter Your Mail Address">
+        </div>
+        <div class="details">
+            <label for="password" style="font-weight: bold; color: #252B48;">Password:</label>
+            <input type="password" class="form-control" id="Password" name="Password" placeholder="Enter Your Password">
+        </div>
+        <div class="button">
+            <button style="border-color: #749BC2; border-radius: 20px; margin-top: 20px; width: 100px; height: 40px; border-width: 7px;" type="submit" class="btn-primary"><span style="font-weight: bold; font-size: medium;">Next</span></button>
+            <button style="border-color: #749BC2; border-radius: 20px; margin-top: 20px; margin-left: 132px; width: 100px; height: 40px;border-width: 7px;" type="submit" class="btn-secondary"><span style="font-weight: bold; font-size: medium;">Cancel</span></button>
+        </div>
+    </form>
+    </div>
+</div>
+</body>
+</html>
