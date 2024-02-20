@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment-3</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body{
+            background-color: #7E30E1;
+        }
+        .bg{
+            background-color: white;
+            margin-top: 30px;
+            border-radius: 10px;
+            max-width: 50%;
+            padding:20px 0;
+        }  
+        .hp{
+            margin-left: auto;
+        }
+        @media (max-width: 700px) {
+            .bg{
+                background-color: white;
+                margin-top: 10px;
+                max-width: 100%;
+                padding: 20px 20px;
+            }   
+        }
+        footer{
+            background-color: #1B1A55;
+        }
+        .footerContainer{
+            width: 100%;
+            padding: 70px 30px 20px;
+        }
+        .socialIcons{
+            display: flex;
+            justify-content: center;
+        }
+        .socialIcons>a{
+            text-decoration: none;
+            padding: 10px;
+            background-color: white;
+            margin: 10px;
+            border-radius: 50%;
+        }
+        .socialIcons>a>i{
+            font-size: 2em;
+            color: #000;
+            opacity: 0.9;
+        }
+        .socialIcons>a:hover{
+            background-color: #1B1A55;
+            transition: 0.5s;
+
+        }
+        .socialIcons>a:hover i{
+            color: white;
+            transition: 0.5s;
+        }
+        .footerNav{
+            margin: 30px 0;
+        }
+        .footerNav>ul{
+            display: flex;
+            justify-content: center;
+            list-style-type: none;
+        }
+        .footerNav>ul>li>a{
+            font-weight: 100;
+            color: white;
+            margin: 20px;
+            text-decoration: none;
+            font-size: 1.3em;
+            opacity: 0.7;
+            transition: 0.3s;
+        }
+        .footerNav>ul>li>a:hover{
+            opacity: 1;
+            font-weight: 500;
+            border-bottom: 4px solid white;
+        }
+        .footerBottom{
+            background-color: #070F2B;
+            padding: 20px;
+            text-align: center;
+        }
+        .footerBottom>p{
+            color: white;
+            font-weight: 100;
+        }
+        .footerBottom>p:hover{
+            font-weight: 600;
+        }
+        .designer{
+            opacity: 0.7;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            font-weight: 400;
+            margin: 0px 5px;
+        }
+        @media (max-width:700px){
+            .footerNav>ul{
+                flex-direction: column;
+            }
+            .footerNav>ul>li{
+                width: 100%;
+                text-align: center;
+                margin: 10px;
+            }
+            .footerNav>ul>li>a{
+                display: flex;
+                flex-direction: row;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg  navbar-dark bg-info">
+            <div class="container">
+                <a class="navbar-brand h1" href="#">
+                    <img src="https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-logo.svg" alt="Logo" width="38" height="32" class="d-inline-block align-text-top">
+                    Bootstrap
+                    <img src="https://cdn.worldvectorlogo.com/logos/javascript-1.svg" alt="logo" width="38" height="32" class="d-inline-block align-text-top">
+                    JavaScript
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"  data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon" ></span>
+                  </button>
+                
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+
+                    <ul class=" nav navbar-nav hp ms-auto mb-2 mb-lg-0"> 
+                        <li class="nav-item">
+                            <a href="#" class="nav-link active">Home</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a href="#" class="nav-link active">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link active">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link active">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <button class="btn btn-primary "><strong>Login</strong></button>
+                        </li>
+                        <li class="nav-item">
+                            <button class="btn btn-secondary"><strong>Sign Up</strong></button>
+                        </li>
+                        
+                    </ul>  
+                    
+                </div>
+                
+            </div>
+        </nav>
+    </header>
+
+    <div class="container bg">
+        <h1 class="h1 text-center"><strong class="text-primary">Panlindrome </strong>- <span class="badge bg-secondary">JavaScript</span></h1>
+        <br>
+        <div class="row justify-content-center">
+            <div class="col-sm-6 ">
+                <label for="Input" class="form-label">Enter Your Input:</label>
+                <input type="text" class="form-control" placeholder="String or Numbers" aria-label="Enter Your Input:" id="ip_pali">
+            </div>
+        </div>
+        <br>
+        <div class="row justify-content-center">
+            <div class="col-sm-6 ">
+                <label for="Output" class="form-label">Your Output:</label>
+                <input type="text" class="form-control" placeholder="Result" aria-label="output" id="op_pali">
+            </div>
+        </div>
+        <br>
+        <div class="row justify-content-center">
+            <div class="col-sm-6">
+                <input type="button" class="btn btn-outline-primary" value="Get Output" onclick="pali()">
+            </div>
+        </div>
+
+    </div>
+    <div class="container bg">
+        <h1 class="h1 text-center"><strong class="text-primary">Prime Number </strong>- <span class="badge bg-secondary">JavaScript</span></h1>
+        <br>
+        <div class="row justify-content-center">
+            <div class="col-sm-6 ">
+                <label for="Input" class="form-label">Enter Your Input:</label>
+                <input type="text" class="form-control" placeholder="Number" aria-label="Enter Your Input:" id="ip_prim">
+            </div>
+        </div>
+        <br>
+        <div class="row justify-content-center">
+            <div class="col-sm-6 ">
+                <label for="Output" class="form-label">Your Output:</label>
+                <input type="text" class="form-control" placeholder="Result" aria-label="output" id="op_prim">
+            </div>
+        </div>
+        <br>
+        <div class="row justify-content-center">
+            <div class="col-sm-6 ">
+                <input type="button" class="btn btn-outline-primary" value="Get Output" onclick="prim()">
+            </div>
+        </div>
+
+    </div>
+    <div class="container bg">
+        <h1 class="h1 text-center"><strong class="text-primary">Listing Prime No</strong>- <span class="badge bg-secondary">JavaScript</span></h1>
+        <br>
+        <div class="row justify-content-center">
+            <div class="col-sm-6 ">
+                <label for="Input" class="form-label">Enter Your Input:</label>
+                <input type="text" class="form-control" placeholder="Number" aria-label="Enter Your Input:" id="ip_prim2">
+            </div>
+        </div>
+        <br>
+        <div class="row justify-content-center">
+            <div class="col-sm-6 ">
+                <label for="Output" class="form-label">Your Output:</label>
+                <input type="text" class="form-control" placeholder="Result" aria-label="output" id="op_prim2">
+            </div>
+        </div>
+        <br>
+        <div class="row justify-content-center">
+            <div class="col-sm-6 ">
+                <input type="button" class="btn btn-outline-primary" value="Get Output" onclick="prim2()">
+            </div>
+        </div>
+
+    </div>
+    <div class="container bg">
+        <h1 class="h1 text-center"><strong class="text-primary">Finding Largest and Smallest No</strong>- <span class="badge bg-secondary">JavaScript</span></h1>
+        <br>
+        <div class="row justify-content-center">
+            <div class="col-sm-6 ">
+                <label for="Input" class="form-label">Enter Your Array:</label>
+                <input type="text" class="form-control" placeholder="Number" aria-label="Enter Your Input:" id="ip_find">
+            </div>
+        </div>
+        <br>
+        <div class="row justify-content-center">
+            <div class="col-sm-3 ">
+                <label for="Output" class="form-label">Largest No:</label>
+                <input type="text" class="form-control" placeholder="Result" aria-label="output" id="lrg">
+            </div>
+            <div class="col-sm-3 ">
+                <label for="Output" class="form-label">Smallest No:</label>
+                <input type="text" class="form-control" placeholder="Result" aria-label="output" id="sml">
+            </div>
+        </div>
+        <br>
+        <div class="row justify-content-center">
+            <div class="col-sm-6 ">
+                <input type="button" class="btn btn-outline-primary" value="Get Output" onclick="finding()">
+            </div>
+        </div>
+
+    </div>
+    <div class="container bg">
+        <h1 class="h1 text-center"><strong class="text-primary">Fibonacci Series</strong>- <span class="badge bg-secondary">JavaScript</span></h1>
+        <br>
+        <div class="row justify-content-center">
+            <div class="col-sm-6 ">
+                <label for="Input" class="form-label">Enter The Limit:</label>
+                <input type="text" class="form-control" placeholder="Number" aria-label="Enter Your Input:" id="fib_ip">
+            </div>
+        </div>
+        <br>
+        <div class="row justify-content-center">
+            <div class="col-sm-6 ">
+                <label for="Output" class="form-label">Your Output:</label>
+                <input type="text" class="form-control" placeholder="Result" aria-label="output" id="fib_op">
+            </div>
+        </div>
+        <br>
+        <div class="row justify-content-center">
+            <div class="col-sm-6 ">
+                <input type="button" class="btn btn-outline-primary" value="Get Output" onclick="fibo()">
+            </div>
+        </div>
+
+    </div>
+
+    <div class="container bg">
+        <h1 class="h1 text-center"><strong class="text-primary">String->Title Case</strong>- <span class="badge bg-secondary">JavaScript</span></h1>
+        <br>
+        <div class="row justify-content-center">
+            <div class="col-sm-6 ">
+                <label for="Input" class="form-label">Enter The String:</label>
+                <input type="text" class="form-control" placeholder="String" aria-label="Enter Your Input:" id="tit_ip">
+            </div>
+        </div>
+        <br>
+        <div class="row justify-content-center">
+            <div class="col-sm-6 ">
+                <label for="Output" class="form-label">Title Case:</label>
+                <input type="text" class="form-control" placeholder="Result" aria-label="output" id="tit_op">
+            </div>
+        </div>
+        <br>
+        <div class="row justify-content-center">
+            <div class="col-sm-6 ">
+                <input type="button" class="btn btn-outline-primary" value="Get Output" onclick="titl()">
+            </div>
+        </div>
+
+    </div>
+
+    <div class="container bg">
+        <h1 class="h1 text-center"><strong class="text-primary">Duplicate Filter</strong>- <span class="badge bg-secondary">JavaScript</span></h1>
+        <br>
+        <div class="row justify-content-center">
+            <div class="col-sm-6 ">
+                <label for="Input" class="form-label">Enter Your Integer Array:</label>
+                <input type="text" class="form-control" placeholder="String" aria-label="Enter Your Input:" id="df_ip">
+            </div>
+        </div>
+        <br>
+        <div class="row justify-content-center">
+            <div class="col-sm-6 ">
+                <label for="Output" class="form-label">Unique Elements:</label>
+                <input type="text" class="form-control" placeholder="Result" aria-label="output" id="df_op">
+            </div>
+        </div>
+        <br>
+        <div class="row justify-content-center">
+            <div class="col-sm-6 ">
+                <input type="button" class="btn btn-outline-primary" value="Get Output" onclick="duprem()">
+            </div>
+        </div>
+
+    </div>
+
+    <div class="container bg">
+        <h1 class="h1 text-center"><strong class="text-primary">Flattening Array</strong>- <span class="badge bg-secondary">JavaScript</span></h1>
+        <br>
+        <div class="row justify-content-center">
+            <div class="col-sm-6 ">
+                <label for="Input" class="form-label">Enter Your Integer Array:</label>
+                <input type="text" class="form-control" placeholder="String" aria-label="Enter Your Input:" id="af_ip">
+            </div>
+        </div>
+        <br>
+        <div class="row justify-content-center">
+            <div class="col-sm-6 ">
+                <label for="Output" class="form-label">Flattened Array:</label>
+                <input type="text" class="form-control" placeholder="Result" aria-label="output" id="af_op">
+            </div>
+        </div>
+        <br>
+        <div class="row justify-content-center">
+            <div class="col-sm-6 ">
+                <input type="button" class="btn btn-outline-primary" value="Get Output" onclick="falt()">
+            </div>
+        </div>
+
+    </div>
+    <div class="container bg">
+        <h1 class="h1 text-center"><strong class="text-primary">Merge Sorted Array</strong>- <span class="badge bg-secondary">JavaScript</span></h1>
+        <br>
+        <div class="row justify-content-center">
+            <div class="col-sm-6 ">
+                <label for="Input" class="form-label">Enter Array 1:</label>
+                <input type="text" class="form-control" placeholder="String" aria-label="Enter Your Input:" id="ms_ip1">
+            </div>
+        </div>
+        <br>
+        <div class="row justify-content-center">
+            <div class="col-sm-6 ">
+                <label for="Input" class="form-label">Enter Array 2:</label>
+                <input type="text" class="form-control" placeholder="String" aria-label="Enter Your Input:" id="ms_ip2">
+            </div>
+        </div>
+        <br>
+        <div class="row justify-content-center">
+            <div class="col-sm-6 ">
+                <label for="Output" class="form-label">Merged Array:</label>
+                <input type="text" class="form-control" placeholder="Result" aria-label="output" id="ms_op">
+            </div>
+        </div>
+        <br>
+        <div class="row justify-content-center">
+            <div class="col-sm-6 ">
+                <input type="button" class="btn btn-outline-primary" value="Get Output" onclick="merge()">
+            </div>
+        </div>
+
+    </div>
+
+    <br>
+    <footer class="container">
+        <div class="footerContainer container">
+          <div class="socialIcons">
+              <a href="#"><i class="fa-brands fa-facebook"></i></a>
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+              <a href="#"><i class="fa-brands fa-github"></i></a>
+              <!-- <a href="#"><i class="fa-brands fa-google"></i></a> -->
+              <a href="#"><i class="fa-brands fa-twitter"></i></a>
+              <!-- <a href="#"><i class="fa-brands fa-youtube"></i></a> -->
+          </div>
+          <div class="footerNav">
+              <ul>
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#">News</a></li>
+                  <li><a href="#">Products</a></li>
+                  <li><a href="#">About Us</a></li>
+                  <li><a href="#">Contact</a></li>
+                  <li><a href="#">Our Team</a></li>
+              </ul>
+          </div>
+        </div>
+        <div class="footerBottom container">
+          <p>Copyright &copy;2024; Designed by <span class="designer">HariHaran</span></p>
+          </div>
+      </footer>
+      
+
+    <script async src="https://cdn.jsdelivr.net/npm/es-module-shims@1/dist/es-module-shims.min.js" crossorigin="anonymous"></script>
+
+    <script>
+        // Palindrome
+        // Method : Function call
+
+        function pali(){
+            var ip=document.getElementById("ip_pali").value;
+            
+            var reg=/[\W_]/g;
+
+            ip=ip.toLowerCase().replace(reg,"");
+            var reverse=ip.split("").reverse().join("");
+            if (ip.trim() === "") {
+                document.getElementById("op_pali").value = "Please enter some text.";
+                return;
+            } else if(ip===reverse){
+                document.getElementById("op_pali").value="Palindrome";
+                return;
+            } else{
+                document.getElementById("op_pali").value= "Not Palindrome";
+                return
+            }
+        }
+        
+        // Prime Number
+        // Method : Function call
+
+        function prim(){
+            var flag=0;
+            var pi=parseInt(document.getElementById("ip_prim").value);
+            if(pi==0 || pi==1 || pi<0){
+                flag=1;
+            }
+            if (isNaN(pi)) {
+                document.getElementById("op_prim").value = "Please enter some value";
+                return;
+            }
+            for(var i=2;i<=pi/2;++i){
+                if(pi%i==0){
+                    flag=1;
+                    break;
+                }
+            }
+            if (flag==0) {
+                document.getElementById("op_prim").value="Prime Number";
+            }
+            else{
+                document.getElementById("op_prim").value="Not Prime Number";
+            }
+        }
+
+        // Listing Prime Numbers
+        // Method : Function call
+
+        function prim2(){
+            var flag;
+            var i,j,opp;
+            opp="1";
+            var pi=parseInt(document.getElementById("ip_prim2").value);
+            if (isNaN(pi)) {
+                document.getElementById("op_prim2").value = "Please enter some value";
+                return;
+            }
+            if(pi==0 || pi==1 || pi<0){
+                document.getElementById("op_prim2").value = "Enter Valid Range";
+                return;
+            }
+            for(i=2;i<=pi;++i)
+            {
+                flag=0;
+                for(j=1;j<=i;j++)
+                {
+                    if(i%j==0)
+                    {
+                        flag++;
+                    }
+                }
+                if(flag==2)
+                {
+                    opp=opp+","+i;
+                }
+            }
+            document.getElementById("op_prim2").value=opp;
+        }
+
+        // Finding Largest Number
+        // Method : Function call
+
+        function finding(){
+            var arr = document.getElementById("ip_find").value.split(",").map(Number);
+            var st = arr[0];
+            var lt = arr[0];
+            var i;
+            for ( var i = 1; i < arr.length; i++) {
+            if (arr[i] < st) {
+                st = arr[i];
+            }
+            if (arr[i] > lt) {
+                lt = arr[i];
+            }
+            }
+            document.getElementById("lrg").value = lt;
+            document.getElementById("sml").value = st;
+        }
+
+        // Fibonacci Sequence
+        // Method : Function call
+
+        function fibo(){
+            var fib=parseInt(document.getElementById("fib_ip").value);
+            var n1,n2,n3;
+            n1=0;
+            n2=1;
+            var op="";
+            op=op+n1;
+            op=op+" "+n2;
+            n3=n1+n2;
+            if(isNaN(fib))
+            {
+                document.getElementById("fib_op").value="Please enter some value";
+            }
+            while(n3<=fib){
+                op=op+" "+n3;
+                n1=n2;
+                n2=n3;
+                n3=n1+n2;
+            }
+            document.getElementById("fib_op").value=op;
+
+        }
+
+        // Title Case
+        // Method : Function call
+
+        function titl() {
+            var str = document.getElementById("tit_ip").value;
+            if(isNaN(str)==false){
+                document.getElementById("tit_op").value = "Please enter valid string";
+                return; 
+            }
+            str = str.toLowerCase().split(' ');
+            for (var i = 0; i < str.length; i++) {
+                if (str[i].length > 1) {
+                    str[i] = str[i].charAt(0).toUpperCase() + str[i].slice(1);
+                }
+            }
+            str = str.join(' ');
+            document.getElementById("tit_op").value = str;
+        }
+
+        // Unique Elements
+        // Method : Function call
+
+        function duprem() {
+            const inputString = document.getElementById("df_ip").value;
+            if (!inputString) {
+                alert("Please enter some comma-separated integers in the input field.");
+                return;
+            }
+            const inputArray = inputString.split(",").map(Number);
+            const uniqueSet = new Set(inputArray);
+            const uniqueArray = Array.from(uniqueSet).join(", ");
+            document.getElementById("df_op").value = uniqueArray;
+        }
+
+        // Flattening Array
+        // Method : Function call
+
+        function falt() {
+            const inputString = document.getElementById("af_ip").value;
+            var reg=/[\W_]/g;
+
+            try {
+                const flattenedArray = inputString
+                .replace(reg,"").split(",")
+                .map(str => parseInt(str.trim(), 10))
+                .flat(Infinity);
+                document.getElementById("af_op").value = flattenedArray.join(",");
+            } catch (error) {
+                alert("Invalid input. Please enter integers separated by commas.");
+            }
+        }
+
+        // Merge Sorted Array
+        // Method : Function call
+
+        function merge() {
+            const arr1 = document.getElementById("ms_ip1").value.split(",").map(Number);
+            const arr2 = document.getElementById("ms_ip2").value.split(",").map(Number);
+            // const array1 = inputElement1.value.split(",").map(Number);
+            // const array2 = inputElement2.value.split(",").map(Number);
+
+            const mergedArray = [];
+            let i = 0,
+            j = 0;
+
+            while (i < arr1.length && j < arr2.length) {
+            if (arr1[i] < arr2[j]) {
+                mergedArray.push(arr1[i]);
+                i++;
+            } else {
+                mergedArray.push(arr2[j]);
+                j++;
+            }
+            }
+
+            // Add any remaining elements from either array
+            while (i < arr1.length) {
+            mergedArray.push(arr1[i]);
+            i++;
+            }
+            while (j < arr2.length) {
+            mergedArray.push(arr2[j]);
+            j++;
+            }
+
+            const n = mergedArray.length;
+            let sorted = 0; 
+
+            for (let i = 0; i < n - 1; i++) {
+                sorted = 1; 
+
+                for (let j = 0; j < n - i - 1; j++) {
+                if (mergedArray[j] > mergedArray[j + 1]) {
+                    [mergedArray[j], mergedArray[j + 1]] = [mergedArray[j + 1], mergedArray[j]];
+                    sorted = 0; 
+                }
+                }
+                if (sorted==1) {
+                break;
+                }
+            }
+
+            document.getElementById("ms_op").value = mergedArray.join(", ");
+        }
+
+    </script>
+    
+</body>
+</html>
